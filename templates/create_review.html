@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form type="POST" action="{% url 'create-review' %}">
+        {% csrf_token %}
+        <label for="title" placeholder="Ого! Я полетів на Мальдіви!">Заголовок</label>
+        <input type="text" id="title" name="title">
+        <br>
+        <label for="text" placeholder="Ого! Я полетів на Мальдіви!">Текст</label>
+        <input type="text" id="text" name="text">
+        <br>
+        <label for="author" placeholder="Саша">Автор</label>
+        <input type="text" id="author" name="author">
+        <br>
+        <label for="pub_date" placeholder="2025-03-28 16:37">Дата</label>
+        <input type="text" id="pub_date" name="pub_date">
+        <br>
+    </form>
+</body>
+</html>
